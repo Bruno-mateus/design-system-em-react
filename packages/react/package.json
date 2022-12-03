@@ -7,8 +7,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "lint": "eslint src/**/*.ts* --fix",
-    "build": "tsup src/index.tsx --format esm,cjs --dts --exterbnal react",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch"
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +19,11 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tsup": "^6.5.0",
     "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@stitches/react": "^1.2.8"
   }
 }

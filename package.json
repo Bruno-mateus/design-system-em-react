@@ -1,6 +1,9 @@
 {
-  "private":true,
-  "workspaces":[
+  "private": true,
+  "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "polished": "^4.2.2"
+  }
 }
