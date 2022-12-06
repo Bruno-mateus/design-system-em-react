@@ -32,6 +32,7 @@
     "@ignite-ui/react": "*",
     "@ignite-ui/tokens": "*",
     "@radix-ui/react-checkbox": "^1.0.1",
+    "@storybook/addon-a11y": "^6.5.14",
     "@vitejs/plugin-react": "^2.2.0",
     "phosphor-react": "^1.4.1"
   }

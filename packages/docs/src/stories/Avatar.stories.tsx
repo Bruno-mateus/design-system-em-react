@@ -8,6 +8,13 @@ export default {
     src: 'https://github.com/Bruno-mateus.png',
     alt: 'Bruno Mateus',
   },
+  argTypes: {
+    children: {
+      src: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
