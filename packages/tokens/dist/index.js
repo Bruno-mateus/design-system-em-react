@@ -26,7 +26,7 @@ __export(src_exports, {
   fonts: () => fonts,
   lineHeights: () => lineHeights,
   radii: () => radii,
-  sizes: () => sizes
+  space: () => space
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -96,8 +96,8 @@ var radii = {
   full: "99999px"
 };
 
-// src/sizes.ts
-var sizes = {
+// src/space.ts
+var space = {
   1: "0.25rem",
   2: "0.5rem",
   3: "0.75rem",
@@ -122,5 +122,5 @@ var sizes = {
   fonts,
   lineHeights,
   radii,
-  sizes
+  space
 });

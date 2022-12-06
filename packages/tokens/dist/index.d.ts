@@ -58,7 +58,7 @@ declare const radii: {
     full: string;
 };
 
-declare const sizes: {
+declare const space: {
     1: string;
     2: string;
     3: string;
@@ -76,4 +76,4 @@ declare const sizes: {
     80: string;
 };
 
-export { colors, fontSizes, fontWeights, fonts, lineHeights, radii, sizes };
+export { colors, fontSizes, fontWeights, fonts, lineHeights, radii, space };
