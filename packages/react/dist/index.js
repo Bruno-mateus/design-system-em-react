@@ -182,6 +182,7 @@ var Box = styled("div", {
   backgroundColor: "$gray800",
   border: "1px solid $gray600"
 });
+Box.displayName = "Box";
 
 // src/components/Text.tsx
 var Text = styled("p", {
@@ -189,26 +190,27 @@ var Text = styled("p", {
   lineHeight: "$base",
   color: "$gray100",
   margin: 0,
-  varints: {
+  variants: {
     size: {
-      xxs: { fontSize: "xxs" },
-      sm: { fontSize: "sm" },
-      md: { fontSize: "md" },
-      lg: { fontSize: "lg" },
-      xl: { fontSize: "xl" },
-      "2xl": { fontSize: "2xl" },
-      "4xl": { fontSize: "4xl" },
-      "5xl": { fontSize: "5xl" },
-      "6xl": { fontSize: "6xl" },
-      "7xl": { fontSize: "7xl" },
-      "8xl": { fontSize: "8xl" },
-      "9xl": { fontSize: "9xl" }
+      xxs: { fontSize: "$xxs" },
+      sm: { fontSize: "$sm" },
+      md: { fontSize: "$md" },
+      lg: { fontSize: "$lg" },
+      xl: { fontSize: "$xl" },
+      "2xl": { fontSize: "$2xl" },
+      "4xl": { fontSize: "$4xl" },
+      "5xl": { fontSize: "$5xl" },
+      "6xl": { fontSize: "$6xl" },
+      "7xl": { fontSize: "$7xl" },
+      "8xl": { fontSize: "$8xl" },
+      "9xl": { fontSize: "$9xl" }
     }
   },
   defaultVariants: {
-    size: "md"
+    size: "xl"
   }
 });
+Text.displayName = "Text";
 
 // src/components/Heading.tsx
 var Heading = styled("h2", {
@@ -216,7 +218,7 @@ var Heading = styled("h2", {
   lineHeight: "$base",
   color: "$gray100",
   margin: 0,
-  varints: {
+  variants: {
     size: {
       sm: { fontSize: "$xl" },
       md: { fontSize: "$2xl" },
@@ -232,6 +234,7 @@ var Heading = styled("h2", {
     size: "md"
   }
 });
+Heading.displayName = "Heading";
 
 // src/components/Avatar/index.tsx
 var import_react2 = __toESM(require("react"));
@@ -270,6 +273,7 @@ var import_phosphor_react = require("phosphor-react");
 function Avatar2(props) {
   return /* @__PURE__ */ import_react2.default.createElement(AvatarContainer, null, /* @__PURE__ */ import_react2.default.createElement(AvatarImage, __spreadValues({}, props)), /* @__PURE__ */ import_react2.default.createElement(AvatarFallback, { delayMs: 600 }, /* @__PURE__ */ import_react2.default.createElement(import_phosphor_react.User, null)));
 }
+Avatar2.displayName = "Avatar";
 
 // src/components/Button.tsx
 var Button = styled("button", {
@@ -344,6 +348,7 @@ var Button = styled("button", {
     size: "md"
   }
 });
+Button.displayName = "Button";
 
 // src/components/TextInput/index.tsx
 var import_react3 = __toESM(require("react"));
@@ -395,6 +400,7 @@ function TextInput(_a) {
   var _b = _a, { prefix: prefix2 } = _b, props = __objRest(_b, ["prefix"]);
   return /* @__PURE__ */ import_react3.default.createElement(TextInputContainer, null, !!prefix2 && /* @__PURE__ */ import_react3.default.createElement(WithPrefix, null, prefix2), /* @__PURE__ */ import_react3.default.createElement(Input, __spreadValues({}, props)));
 }
+TextInput.displayName = "TextInput";
 
 // src/components/TextArea.tsx
 var TextArea = styled("textarea", {
@@ -421,6 +427,7 @@ var TextArea = styled("textarea", {
     color: "$gray400"
   }
 });
+TextArea.displayName = "TextArea";
 
 // src/components/Checkbox/index.tsx
 var import_react4 = __toESM(require("react"));
@@ -480,6 +487,7 @@ var CheckboxIndicator = styled(Checkbox.Indicator, {
 function Checkbox2() {
   return /* @__PURE__ */ import_react4.default.createElement(CheckboxContainer, null, /* @__PURE__ */ import_react4.default.createElement(CheckboxIndicator, { asChild: true }, /* @__PURE__ */ import_react4.default.createElement(import_phosphor_react2.Check, { weight: "bold" })));
 }
+Checkbox2.displayName = "Checkbox";
 
 // src/components/MultiStep/index.tsx
 var import_react5 = __toESM(require("react"));
@@ -517,6 +525,7 @@ function MultiStep({ size, currentStep = 1 }) {
     return /* @__PURE__ */ import_react5.default.createElement(Step, { key: step, active: currentStep >= step });
   })));
 }
+MultiStep.displayName = "MultiStep";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,

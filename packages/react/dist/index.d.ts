@@ -206,7 +206,9 @@ interface BoxProps extends ComponentProps<typeof Box> {
     as?: ElementType;
 }
 
-declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", {}, {}, _stitches_react_types_css_util.CSS<{}, {
+declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", {
+    size?: "xxs" | "sm" | "md" | "lg" | "xl" | "2xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl" | undefined;
+}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
         white: string;
         black: string;
@@ -407,7 +409,9 @@ interface TextProps extends ComponentProps<typeof Text> {
     as?: ElementType;
 }
 
-declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h2", {}, {}, _stitches_react_types_css_util.CSS<{}, {
+declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h2", {
+    size?: "sm" | "md" | "lg" | "2xl" | "4xl" | "5xl" | "6xl" | "3xl" | undefined;
+}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
         white: string;
         black: string;
@@ -809,6 +813,9 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
 interface AvatarProps extends ComponentProps<typeof AvatarImage> {
 }
 declare function Avatar(props: AvatarProps): JSX.Element;
+declare namespace Avatar {
+    var displayName: string;
+}
 
 declare const Button: _stitches_react_types_styled_component.StyledComponent<"button", {
     variant?: "primary" | "secondary" | "tertiary" | undefined;
@@ -1216,6 +1223,9 @@ interface InputProps extends ComponentProps<typeof Input> {
     prefix?: string;
 }
 declare function TextInput({ prefix, ...props }: InputProps): JSX.Element;
+declare namespace TextInput {
+    var displayName: string;
+}
 
 declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"textarea", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
@@ -1618,11 +1628,17 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
 interface CheckboxProps extends ComponentProps<typeof CheckboxContainer> {
 }
 declare function Checkbox(): JSX.Element;
+declare namespace Checkbox {
+    var displayName: string;
+}
 
 interface MultiStepProps {
     size: number;
     currentStep?: number;
 }
 declare function MultiStep({ size, currentStep }: MultiStepProps): JSX.Element;
+declare namespace MultiStep {
+    var displayName: string;
+}
 
 export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, InputProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextProps };
