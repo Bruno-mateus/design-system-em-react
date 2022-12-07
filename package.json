@@ -5,12 +5,17 @@
   ],
   "scripts": {
     "dev": "turbo run dev --parallel",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "changeset":"changeset",
+    "version-packages":"changeset version",
+    "release": "turbo run build --filter=!@bruno-gom-ignite-ui/docs && changeset publish"
   },
   "dependencies": {
+    "@changesets/cli": "^2.25.2",
     "polished": "^4.2.2"
   },
   "devDependencies": {
     "turbo": "^1.6.3"
   }
+
 }
