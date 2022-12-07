@@ -11,7 +11,7 @@
     "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@ignite-ui/eslint-config": "*",
     "@ignite-ui/tokens": "*",
