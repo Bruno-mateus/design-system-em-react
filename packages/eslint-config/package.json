@@ -1,7 +1,7 @@
 {
   "name": "@bruno-gom-ignite-ui/eslint-config",
-  "private":true,
-  "version":"1.0.0",
+  "private": true,
+  "version": "2.0.0",
   "license": "MIT",
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.1.3",

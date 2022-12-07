@@ -1,16 +1,15 @@
 {
   "name": "@bruno-gom-ignite-ui/tokens",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types":"./dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
-        "lint":"eslint src/**/*.ts* --fix"
+    "lint": "eslint src/**/*.ts* --fix"
   },
-
   "author": "",
   "license": "MIT",
   "devDependencies": {
