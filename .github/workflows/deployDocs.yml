@@ -20,6 +20,9 @@ jobs:
             - run: npm ci
 
             - run: npm run build
+              env: 
+                TURBO_TOKEN: iGNITE UI CI/CD
+                TURBO_TEAM: BTEAM-mga
 
             - name: Deploy storybook
               working-directory: ./packages/docs
