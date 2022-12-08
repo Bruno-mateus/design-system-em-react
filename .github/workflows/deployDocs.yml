@@ -23,7 +23,7 @@ jobs:
 
             - run: npm run build
               env: 
-                TURBO_TOKEN: iGNITE UI CI/CD
+                TURBO_TOKEN: ${{secrets.VERCEL_TOKEN}}
                 TURBO_TEAM: BTEAM-mga
 
             - name: Deploy storybook
