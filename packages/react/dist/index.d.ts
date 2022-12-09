@@ -5,6 +5,7 @@ import { ComponentProps, ElementType, ReactNode } from 'react';
 import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
+import * as ToastPrimitive from '@radix-ui/react-toast';
 
 declare const Box: _stitches_react_types_styled_component.StyledComponent<"div", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
@@ -1653,9 +1654,15 @@ declare namespace MultiStep {
 interface TooltipProps extends ComponentProps<typeof TooltipPrimitive.Root> {
     content: string | ReactNode;
 }
-declare function Tooltip({ children, content }: TooltipProps): JSX.Element;
+declare function Tooltip({ children, content, ...props }: TooltipProps): JSX.Element;
 declare namespace Tooltip {
     var displayName: string;
 }
 
-export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, InputProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextProps, Tooltip, TooltipProps };
+interface ToastProps extends ComponentProps<typeof ToastPrimitive.Root> {
+    title: string;
+    description?: string;
+}
+declare function Toast({ title, description, ...props }: ToastProps): JSX.Element;
+
+export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, InputProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextProps, Toast, ToastProps, Tooltip, TooltipProps };

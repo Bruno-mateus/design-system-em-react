@@ -7,7 +7,7 @@ export interface TooltipProps
   content: string | ReactNode
 }
 
-export function Tooltip({ children, content }: TooltipProps) {
+export function Tooltip({ children, content, ...props }: TooltipProps) {
   return (
     <TooltipPrimitive.Provider>
       <TooltipPrimitive.Root>

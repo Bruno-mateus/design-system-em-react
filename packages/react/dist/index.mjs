@@ -511,10 +511,60 @@ var TooltipArrow = styled(TooltipPrimitive.Arrow, {
 });
 
 // src/components/Tooltip/index.tsx
-function Tooltip({ children, content }) {
+function Tooltip(_a) {
+  var _b = _a, { children, content } = _b, props = __objRest(_b, ["children", "content"]);
   return /* @__PURE__ */ React5.createElement(TooltipPrimitive2.Provider, null, /* @__PURE__ */ React5.createElement(TooltipPrimitive2.Root, null, /* @__PURE__ */ React5.createElement(TooltipPrimitive2.Trigger, { asChild: true }, children), /* @__PURE__ */ React5.createElement(TooltipPrimitive2.Portal, null, /* @__PURE__ */ React5.createElement(TooltipContent, null, content, /* @__PURE__ */ React5.createElement(TooltipArrow, null)))));
 }
 Tooltip.displayName = "Tooltip";
+
+// src/components/Toast/index.tsx
+import React6 from "react";
+import * as ToastPrimitive2 from "@radix-ui/react-toast";
+
+// src/components/Toast/styles.tsx
+import * as ToastPrimitive from "@radix-ui/react-toast";
+var VIEWPORT_PADDING = 25;
+var hide = keyframes({
+  "0%": { opacity: 1 },
+  "100%": { opacity: 0 }
+});
+var slideIn2 = keyframes({
+  from: { transform: `translateX(calc(100% + ${VIEWPORT_PADDING}px))` },
+  to: { transform: "translateX(0)" }
+});
+var swipeOut = keyframes({
+  from: { transform: "translateX(var(--radix-toast-swipe-end-x))" },
+  to: { transform: `translateX(calc(100% + ${VIEWPORT_PADDING}px))` }
+});
+var ToastRoot = styled(ToastPrimitive.Root, {
+  background: "$gray800",
+  border: "1px solid $gray600",
+  borderRadius: "$sm",
+  padding: "$3 $4",
+  position: "relative",
+  '&[data-state="open"]': {
+    animation: `${slideIn2} 150ms cubic-bezier(0.16, 1, 0.3, 1)`
+  },
+  '&[data-state="closed"]': {
+    animation: `${hide} 100ms ease-in`
+  },
+  '&[data-swipe="move"]': {
+    transform: "translateX(var(--radix-toast-swipe-move-x))"
+  },
+  '&[data-swipe="cancel"]': {
+    transform: "translateX(0)",
+    transition: "transform 200ms ease-out"
+  },
+  '&[data-swipe="end"]': {
+    animation: `${swipeOut} 100ms ease-out`
+  }
+});
+
+// src/components/Toast/index.tsx
+function Toast(_a) {
+  var _b = _a, { title, description } = _b, props = __objRest(_b, ["title", "description"]);
+  return /* @__PURE__ */ React6.createElement(ToastPrimitive2.Provider, null, /* @__PURE__ */ React6.createElement(ToastRoot, { duration: 3e3 }, /* @__PURE__ */ React6.createElement(ToastPrimitive2.Title, null, title), description && /* @__PURE__ */ React6.createElement(ToastPrimitive2.Description, null, description), /* @__PURE__ */ React6.createElement(ToastPrimitive2.Close, null, "close")), /* @__PURE__ */ React6.createElement(ToastPrimitive2.Viewport, null));
+}
 export {
   Avatar2 as Avatar,
   Box,
@@ -525,5 +575,6 @@ export {
   Text,
   TextArea,
   TextInput,
+  Toast,
   Tooltip
 };
