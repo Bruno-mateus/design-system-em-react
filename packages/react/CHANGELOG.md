@@ -1,5 +1,11 @@
 # @bruno-gom-ignite-ui/react
 
+## 3.0.0
+
+### Major Changes
+
+- test npm ci/cd
+
 ## 2.1.0
 
 ### Minor Changes

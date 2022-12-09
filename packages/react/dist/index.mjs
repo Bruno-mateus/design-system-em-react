@@ -48,7 +48,8 @@ var colors = {
   ignite300: "#00B37E",
   ignite500: "#00875F",
   ignite700: "#015F43",
-  ignite900: "#00291D"
+  ignite900: "#00291D",
+  test: "#fff"
 };
 
 // ../tokens/src/font-sizes.ts
@@ -489,6 +490,31 @@ function MultiStep({ size, currentStep = 1 }) {
   })));
 }
 MultiStep.displayName = "MultiStep";
+
+// src/components/Tooltip/index.tsx
+import React5 from "react";
+import * as TooltipPrimitive2 from "@radix-ui/react-tooltip";
+
+// src/components/Tooltip/styles.ts
+import * as TooltipPrimitive from "@radix-ui/react-tooltip";
+var TooltipContent = styled(TooltipPrimitive.Content, {
+  background: "$gray900",
+  fontFamily: "$default",
+  padding: "$3 $4",
+  borderRadius: "$sm",
+  color: "$white",
+  fontSize: "$sm",
+  boxShadow: "4px 16px 24px rgba(0,0,0,0.25)"
+});
+var TooltipArrow = styled(TooltipPrimitive.Arrow, {
+  fill: "$gray900"
+});
+
+// src/components/Tooltip/index.tsx
+function Tooltip({ children, content }) {
+  return /* @__PURE__ */ React5.createElement(TooltipPrimitive2.Provider, null, /* @__PURE__ */ React5.createElement(TooltipPrimitive2.Root, null, /* @__PURE__ */ React5.createElement(TooltipPrimitive2.Trigger, { asChild: true }, children), /* @__PURE__ */ React5.createElement(TooltipPrimitive2.Portal, null, /* @__PURE__ */ React5.createElement(TooltipContent, null, content, /* @__PURE__ */ React5.createElement(TooltipArrow, null)))));
+}
+Tooltip.displayName = "Tooltip";
 export {
   Avatar2 as Avatar,
   Box,
@@ -498,5 +524,6 @@ export {
   MultiStep,
   Text,
   TextArea,
-  TextInput
+  TextInput,
+  Tooltip
 };
