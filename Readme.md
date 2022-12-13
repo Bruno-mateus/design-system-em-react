@@ -10,8 +10,10 @@ TypeScript
 
 Imagens das features adicionadas
 
-###Toast
+### Toast
+
 ![image](https://user-images.githubusercontent.com/63961258/207459306-a54fab5b-af64-4d78-ba9d-953f27ccccb0.png)
 
-###Tooltip
+### Tooltip
+
 ![image](https://user-images.githubusercontent.com/63961258/207459416-b6ca4f45-b23e-4f59-be32-7796ab47b826.png)
