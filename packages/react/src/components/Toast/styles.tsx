@@ -21,8 +21,13 @@ const swipeOut = keyframes({
 
 export const ToastRoot = styled(ToastPrimitive.Root, {
   background: '$gray800',
+  fontFamily: '$default',
+  lineHeight: '$tall',
   border: '1px solid $gray600',
   borderRadius: '$sm',
+  display: 'flex',
+  flexDirection: 'column',
+  maxWidth: 360,
   padding: '$3 $4',
   position: 'relative',
   '&[data-state="open"]': {
@@ -41,4 +46,37 @@ export const ToastRoot = styled(ToastPrimitive.Root, {
   '&[data-swipe="end"]': {
     animation: `${swipeOut} 100ms ease-out`,
   },
+})
+export const ToastTitle = styled(ToastPrimitive.Title, {
+  color: '$white',
+  fontWeight: 'bold',
+  fontSize: '$xl',
+})
+export const ToastDescription = styled(ToastPrimitive.Description, {
+  color: '$gray200',
+  fontSize: '$sm',
+})
+
+export const ToastClose = styled(ToastPrimitive.Close, {
+  position: 'absolute',
+
+  background: 'transparent',
+  border: 'none',
+  cursor: 'pointer',
+  top: '$3',
+  right: '$4',
+  svg: {
+    color: '$gray200',
+  },
+})
+
+export const ToastViewport = styled(ToastPrimitive.Viewport, {
+  position: 'fixed',
+  bottom: 0,
+  right: 0,
+  padding: VIEWPORT_PADDING,
+  gap: 10,
+  width: 390,
+  zIndex: 888888888888,
+  margin: 0,
 })

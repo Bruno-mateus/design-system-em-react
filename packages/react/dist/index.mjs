@@ -538,8 +538,13 @@ var swipeOut = keyframes({
 });
 var ToastRoot = styled(ToastPrimitive.Root, {
   background: "$gray800",
+  fontFamily: "$default",
+  lineHeight: "$tall",
   border: "1px solid $gray600",
   borderRadius: "$sm",
+  display: "flex",
+  flexDirection: "column",
+  maxWidth: 360,
   padding: "$3 $4",
   position: "relative",
   '&[data-state="open"]': {
@@ -559,11 +564,42 @@ var ToastRoot = styled(ToastPrimitive.Root, {
     animation: `${swipeOut} 100ms ease-out`
   }
 });
+var ToastTitle = styled(ToastPrimitive.Title, {
+  color: "$white",
+  fontWeight: "bold",
+  fontSize: "$xl"
+});
+var ToastDescription = styled(ToastPrimitive.Description, {
+  color: "$gray200",
+  fontSize: "$sm"
+});
+var ToastClose = styled(ToastPrimitive.Close, {
+  position: "absolute",
+  background: "transparent",
+  border: "none",
+  cursor: "pointer",
+  top: "$3",
+  right: "$4",
+  svg: {
+    color: "$gray200"
+  }
+});
+var ToastViewport = styled(ToastPrimitive.Viewport, {
+  position: "fixed",
+  bottom: 0,
+  right: 0,
+  padding: VIEWPORT_PADDING,
+  gap: 10,
+  width: 390,
+  zIndex: 888888888888,
+  margin: 0
+});
 
 // src/components/Toast/index.tsx
+import { X } from "phosphor-react";
 function Toast(_a) {
   var _b = _a, { title, description } = _b, props = __objRest(_b, ["title", "description"]);
-  return /* @__PURE__ */ React6.createElement(ToastPrimitive2.Provider, null, /* @__PURE__ */ React6.createElement(ToastRoot, { duration: 3e3 }, /* @__PURE__ */ React6.createElement(ToastPrimitive2.Title, null, title), description && /* @__PURE__ */ React6.createElement(ToastPrimitive2.Description, null, description), /* @__PURE__ */ React6.createElement(ToastPrimitive2.Close, null, "close")), /* @__PURE__ */ React6.createElement(ToastPrimitive2.Viewport, null));
+  return /* @__PURE__ */ React6.createElement(ToastPrimitive2.Provider, { swipeDirection: "right" }, /* @__PURE__ */ React6.createElement(ToastRoot, __spreadValues({ duration: 2e3 }, props), /* @__PURE__ */ React6.createElement(ToastTitle, null, title), /* @__PURE__ */ React6.createElement(ToastClose, null, /* @__PURE__ */ React6.createElement(X, { size: 20 })), description && /* @__PURE__ */ React6.createElement(ToastDescription, null, description)), /* @__PURE__ */ React6.createElement(ToastViewport, null));
 }
 export {
   Avatar2 as Avatar,
