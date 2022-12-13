@@ -1,0 +1,2 @@
+import{A as t}from"./index.941611da.js";import"./index.1a9923d2.js";import"./iframe.8f0b59c7.js";import"./index.ce2a2007.js";import"./jsx-runtime.9151f591.js";const e={title:"Data Display/Avatar",component:t,args:{src:"https://github.com/Bruno-mateus.png",alt:"Bruno Mateus"},argTypes:{children:{src:{type:"text"}}}},p={},c={args:{src:void 0}},m=["Primary","WithFallback"];export{p as Primary,c as WithFallback,m as __namedExportsOrder,e as default};
+//# sourceMappingURL=Avatar.stories.ef1538a6.js.map
